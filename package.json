@@ -1,0 +1,23 @@
+{
+  "name": "virginproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parapam-front/virgin.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "Pavel Zlobin <mickon196@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parapam-front/virgin/issues"
+  },
+  "homepage": "https://github.com/parapam-front/virgin#readme"
+}
