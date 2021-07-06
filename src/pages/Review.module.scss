@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.feedbackContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 1070px;
+  margin: 58px 0 170px 0;
+}
+
+.commentContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 130px 0 0;
+  width: 568px;
+  position: relative;
+}
+
+@media (max-width: 1025px) {
+  .feedbackContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 64px 0 72px;
+  }
+  .commentContainer {
+    order: 1;
+    margin: 0 0 84px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .commentContainer {
+    width: 90%;
+  }
+  .feedbackContainer {
+    margin: 34px 0 42px;
+  }
+}

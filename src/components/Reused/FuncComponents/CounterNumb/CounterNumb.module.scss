@@ -1,0 +1,48 @@
+.changeCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.changeCont__text {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0 0 12px 0;
+}
+
+.changeNumbCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+
+  button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button::before {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background: #333333;
+    position: absolute;
+  }
+
+  .buttonPlus::after {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background: #333333;
+    position: absolute;
+    transform: rotate(90deg);
+  }
+}

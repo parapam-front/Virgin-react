@@ -1,0 +1,115 @@
+.feedbackContainer {
+  width: 100%;
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 60px;
+  color: #333333;
+  text-transform: uppercase;
+  position: relative;
+  margin: 114px 0 68px;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  width: 64px;
+  height: 1px;
+  background: #E8B567;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  opacity: 0.7;
+  max-width: 544px;
+  margin: 0 0 64px;
+}
+
+.videoContainer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 0 112px 0;
+
+  button {
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, .35);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .play {
+      margin: 0 0 0 8px;
+    }
+
+    svg {
+      fill: #FFFFFF;
+    }
+  }
+
+  button.videoPause {
+    display: none;
+  }
+}
+
+.videoContainer:hover button.videoPause {
+  display: flex;
+}
+
+.videoMask {
+  position: absolute;
+  background: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  max-width: 970px;
+  max-height: 628px;
+}
+
+.videoContainer:hover {
+  .videopause {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  .feedbackContainer {
+    width: 100%;
+  }
+  .videoContainer {
+    width: 90%;
+
+    video {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .description {
+    max-width: 90%;
+  }
+  .title{
+    font-size: 18px;
+    line-height: 36px;
+  }
+}

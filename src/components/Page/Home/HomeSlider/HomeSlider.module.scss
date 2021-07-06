@@ -1,0 +1,119 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+  max-width: 1920px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.input1,.input2,.input3 {
+  display: none;
+}
+
+.sliderCont {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  display: flex;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.controls::before {
+  content: '';
+  width: 456px;
+  bottom: 0;
+  right: calc(100% + 98px);
+  height: 1px;
+  position: absolute;
+  background-image: linear-gradient(to right, #E8B567 5%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 40px 1px;
+  background-repeat: repeat-x;
+}
+
+.controls::after {
+  content: '';
+  width: 456px;
+  bottom: 0;
+  left: calc(100% + 98px);
+  height: 1px;
+  position: absolute;
+  background-image: linear-gradient(to right, #E8B567 5%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 40px 1px;
+  background-repeat: repeat-x;
+}
+
+.slide-label {
+  cursor: pointer;
+  height: 32px;
+  position: relative;
+  width: 16px;
+  transition: .3s;
+}
+
+.slide-label::after {
+  content: '';
+  transition: .3s;
+  display: block;
+  width: 1px;
+  height: 17px;
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.slide-label::before {
+  content: '';
+  transition: .3s;
+  display: block;
+  width: 1px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.input1:checked ~ .controls .slide-label:nth-of-type(1)::before,
+.input2:checked ~ .controls .slide-label:nth-of-type(2)::before,
+.input3:checked ~ .controls .slide-label:nth-of-type(3)::before {
+  background: #E8B567;
+}
+
+.input1:checked ~ .controls .slide-label:nth-of-type(1)::after,
+.input2:checked ~ .controls .slide-label:nth-of-type(2)::after,
+.input3:checked ~ .controls .slide-label:nth-of-type(3)::after {
+  display: none;
+}
+
+.input1:checked ~ .sliderCont {
+  left: 0;
+  transition: .3s;
+}
+
+.input2:checked ~ .sliderCont {
+  left: -100%;
+  transition: .3s;
+}
+
+.input3:checked ~ .sliderCont {
+  left: -200%;
+  transition: .3s;
+}
+
+@media (max-width: 640px) {
+  .controls {
+    display: none;
+  }
+}

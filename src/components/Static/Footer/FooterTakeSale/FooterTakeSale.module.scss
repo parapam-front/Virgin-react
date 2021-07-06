@@ -1,0 +1,111 @@
+.wrapper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+  background: #E8B567;
+}
+
+.form {
+  height: 100%;
+  width: 1170px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  margin: 0 72px 0 58px;
+  width: 166px;
+  border-bottom: 1px solid #000000;
+  padding: 0 40px;
+}
+
+.input::placeholder {
+  color: #000000;
+}
+
+.submit {
+  width: 370px;
+  height: 80px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitText {
+  color: #ffffff;
+  width: 146px;
+  position: relative;
+  text-align: start;
+  transition: .3s;
+}
+
+.submitText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.submitText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.submit:hover .submitText {
+  width: 194px;
+}
+
+.submit:hover .submitText::before,
+.submit:hover .submitText::after {
+  opacity: 1;
+}
+
+
+@media (max-width: 1370px) {
+  .wrapper {
+    height: 384px;
+    align-items: center;
+  }
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    margin: 64px 0 46px;
+    align-items: center;
+  }
+  .formLegend {
+    font-size: 18px;
+    line-height: 36px;
+    max-width: 242px;
+    text-align: center;
+  }
+  .input {
+    margin: 44px 0 54px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .submit {
+    width: 90%;
+  }
+}

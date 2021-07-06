@@ -1,0 +1,175 @@
+.container {
+  align-self: self-start;
+}
+
+.title {
+  margin: 0;
+  align-self: flex-start;
+  font-size: 30px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.orderInfoBlock {
+  position: relative;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin: 46px 0 44px 0;
+}
+
+.orderSum {
+  position: relative;
+  font-size: 12px;
+  line-height: 24px;
+  top: -10px;
+  margin: 0 0 0 16px;
+
+}
+
+.orderElContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.orderElBox {
+  display: flex;
+  align-items: center;
+  width: 362px;
+  height: 114px;
+}
+
+.orderElImgContainer {
+  display: flex;
+  height: 100%;
+  width: 118px;
+  align-items: center;
+  justify-content: center;
+  background: #F8F8F8;
+  margin: 0 22px 0 0;
+}
+
+.orderElImg {
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.orderElTextCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.orderElValueCont {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+}
+
+.orderElCount {
+  margin: 0 0 0 20px;
+}
+
+.buttonOnHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  margin: 42px 0 44px 0;
+  background: black;
+  color: #FFFFFF;
+  width: 270px;
+}
+
+.buttonOnHomeText {
+  width: 100px;
+  position: relative;
+  text-align: start;
+  transition: .3s;
+}
+
+.buttonOnHomeText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.buttonOnHomeText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.buttonOnHome:hover .buttonOnHomeText {
+  width: 160px;
+}
+
+.buttonOnHome:hover .buttonOnHomeText::before,
+.buttonOnHome:hover .buttonOnHomeText::after {
+  opacity: 1;
+}
+
+@media (max-width: 1025px) {
+  .container {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    align-self: center;
+  }
+  .orderElContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0 0 32px;
+  }
+  .orderElBox {
+    width: 90%;
+  }
+  .orderElValueCont {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .orderElCount {
+    margin: 0 0 6px 0;
+  }
+  .buttonOnHome {
+    width: 90%;
+  }
+  .orderElName {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}

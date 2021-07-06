@@ -1,0 +1,93 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #161616;
+  color: #FFFFFF;
+  margin: 112px 0 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  input {
+    display: none;
+  }
+}
+
+
+.radioBlock {
+  display: flex;
+  height: 80px;
+  margin: 0 0 112px;
+  width: 824px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #828282;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(242, 242, 242, 0.3);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.input1:checked ~ .radioBlock .label:nth-of-type(1),
+.input2:checked ~ .radioBlock .label:nth-of-type(2),
+.input3:checked ~ .radioBlock .label:nth-of-type(3) {
+  color: #FFFFFF;
+  border-bottom: 1px solid #E8B567;
+}
+
+.contentContainerDescription, .contentContainerStructure, .contentContainerHowUse {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+.input1:checked ~ .contentContainerDescription {
+  display: flex;
+}
+
+.input2:checked ~ .contentContainerStructure {
+  display: flex;
+}
+
+.input3:checked ~ .contentContainerHowUse {
+  display: flex;
+}
+
+@media (max-width: 1025px) {
+  .radioBlock {
+    max-width: 100vw;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .contentContainerDescription, .contentContainerStructure, .contentContainerHowUse {
+    width: 90%;
+  }
+  .container {
+    width: 100%;
+  }
+  .label {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+  }
+  .radioBlock {
+    margin: 0 0 64px 0;
+  }
+}

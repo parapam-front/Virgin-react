@@ -1,0 +1,215 @@
+.title {
+  margin: 0 0 116px 0;
+  align-self: flex-start;
+  font-size: 30px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 132px 0 0;
+  width: 370px;
+}
+
+.formBox:nth-of-type(1) {
+  margin: 0 0 104px 0;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .span {
+    position: absolute;
+    top: -44px;
+  }
+
+  label {
+    margin: 0 0 20px 0;
+  }
+}
+
+.formTwoEl {
+  display: flex;
+  justify-content: space-between;
+
+  label {
+    width: 60%;
+  }
+
+  label:nth-of-type(2) {
+    width: 30%;
+  }
+}
+
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  margin: 42px 0 44px 0;
+  background: black;
+  color: #FFFFFF;
+}
+
+.formButtonText {
+  width: 124px;
+  position: relative;
+  text-align: start;
+  transition: .3s;
+}
+
+.formButtonText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.formButtonText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.formButton:hover .formButtonText {
+  width: 160px;
+}
+
+.formButton:hover .formButtonText::before,
+.formButton:hover .formButtonText::after {
+  opacity: 1;
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.checkboxLabel {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333333;
+
+  .checkboxSpan {
+    position: absolute;
+    top: 0;
+    width: 282px;
+    left: 54px;
+    font-size: 15px;
+    line-height: 18px;
+
+    span {
+      border-bottom: 1px dashed #333333;
+    }
+  }
+}
+
+.checkboxLabel:before {
+  content: " ";
+  color: #000;
+  font-size: 50px;
+  line-height: 50px;
+  position: absolute;
+  color: yellowgreen;
+  bottom: 0;
+}
+
+.checkboxInput:checked + .checkboxLabel:before {
+  content: '✓';
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  width: 365px;
+  position: relative;
+}
+
+.productDescriptionBlock {
+  display: flex;
+  position: absolute;
+  top: -44px;
+}
+
+.productDescription {
+  margin: 0 24px 0 0;
+  color: #BDBDBD;
+}
+
+
+@media (max-width: 1025px) {
+  .title {
+    align-self: center;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .formContainer {
+    order: 2;
+  }
+  .productContainer {
+    order: 1;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .formContainer {
+    margin: 64px 0 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0 0 64px;
+  }
+  .formContainer {
+    width: 90%;
+  }
+  .formBox {
+    .span {
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .checkboxLabel {
+    .checkboxSpan {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

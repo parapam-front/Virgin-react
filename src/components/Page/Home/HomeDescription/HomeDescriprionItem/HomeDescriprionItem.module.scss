@@ -1,0 +1,144 @@
+.wrapper {
+  width: 50%;
+  display: flex;
+  margin: 0 0 120px 0;
+  justify-content: center;
+}
+
+.cont {
+  width: 314px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 50px 28px;
+  position: relative;
+}
+
+.titleCont {
+  position: relative;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+.line {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  left: -32px;
+  background: #E8B567;
+}
+
+.descr {
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+  color: #828282;
+}
+
+.link {
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.cont:hover .linkText {
+  opacity: 1;
+}
+
+.linkText {
+  opacity: 0;
+  transition: .3s;
+  width: 142px;
+  position: relative;
+}
+
+.linkText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.linkText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.linkText:hover::before, .linkText:hover::after {
+  right: -22px;
+}
+
+@media (max-width: 1370px) {
+  .cont {
+    max-width: 238px;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .link {
+    bottom: -64px;
+  }
+  .linkText {
+    opacity: 1;
+  }
+  .line{
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    width: 80vw;
+    align-items: center;
+  }
+  .cont {
+    text-align: center;
+   align-items: center;
+    width: 100%;
+    max-width: none;
+  }
+ .descr{
+  margin: 32px 0 40px;
+ }
+  .line {
+    display: none;
+  }
+  .link {
+    position: static;
+   width: 132px;
+  }
+  .linkText {
+    width: 100%;
+   text-align: left;
+  }
+  .linkText::before,
+  .linkText::after {
+
+    right: -22px;
+
+  }
+}

@@ -1,0 +1,111 @@
+.commentBox {
+  width: calc(100% - 132px);
+  border-left: 1px solid #F1F1F1;
+  border-right: 1px solid #F1F1F1;
+  border-top: 1px solid #F1F1F1;
+  padding: 72px 68px 68px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.commentBox:nth-of-type(even) {
+  background: #F8F8F8;
+}
+
+.commentBox:last-of-type {
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.commentNameContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 52px 0;
+}
+
+.commentName {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #797979;
+  position: relative;
+}
+
+.commentName::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: #E8B567;
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+}
+
+.commentDate {
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #BDBDBD;
+}
+
+.commentContent {
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+  color: #828282
+}
+
+.commentRate {
+  margin: 48px 0 0;
+}
+
+.starSvg {
+  fill: none;
+  stroke: #E8B567;
+  padding: 0 8px 0 0;
+
+}
+
+.starSvg:nth-last-of-type(1) {
+  padding: 0;
+}
+
+.commentButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: none;
+  background: none;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+  bottom: -66px;
+  position: absolute;
+  left: 52px;
+}
+
+.svgFill {
+  fill: #E8B567;
+}
+
+@media (max-width: 1025px) {
+  .commentBox {
+    order: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .commentBox {
+    padding: 32px 24px;
+  }
+  .commentBox {
+    width: calc(100% - 48px);
+  }
+}
