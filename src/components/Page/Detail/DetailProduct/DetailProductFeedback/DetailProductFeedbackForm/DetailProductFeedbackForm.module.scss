@@ -1,0 +1,123 @@
+.feedbackForm {
+  width: 370px;
+  min-height: 584px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedbackDescription {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+}
+
+.feedbackName {
+  width: calc(100% - 58px);
+  padding: 11px 40px 9px 18px;
+  position: relative;
+  border: 1px solid rgba(144, 164, 174, .48);
+  margin: 32px 0 44px 0;
+  background-image: url('/assets/img/detail/feedback/account.svg');
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
+
+.feedbackStarsContainer {
+  display: flex;
+}
+
+.feedbackContentEditable {
+  margin: 48px 0 0;
+  width: calc(100% - 24px);
+  min-height: 270px;
+  border: 1px solid rgba(144, 164, 174, .48);
+  padding: 11px 6px 9px 18px;
+  font-size: 16px;
+  line-height: 24px;
+  outline: none;
+}
+
+[data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: #888;
+}
+
+.feedbackButton {
+  width: 270px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #000000;
+  margin: 38px 0 0 0;
+}
+
+.feedbackButtonText {
+  width: 124px;
+  position: relative;
+  text-align: start;
+  transition: .3s;
+}
+
+.feedbackButtonText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.feedbackButtonText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.feedbackButton:hover .feedbackButtonText {
+  width: 194px;
+}
+
+.feedbackButton:hover .feedbackButtonText::before,
+.feedbackButton:hover .feedbackButtonText::after {
+  opacity: 1;
+}
+
+@media (max-width: 1025px) {
+  .feedbackForm {
+    order: 2;
+    width: 568px;
+  }
+  .feedbackButton {
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .feedbackForm {
+    width: 90%;
+  }
+  .feedbackName {
+    margin: 32px 0 24px;
+  }
+  .feedbackContentEditable {
+    margin: 24px 0 0;
+  }
+}

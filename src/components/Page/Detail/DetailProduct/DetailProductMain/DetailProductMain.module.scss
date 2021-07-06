@@ -1,0 +1,276 @@
+.cont {
+  width: 1080px;
+  height: 530px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 394px;
+  height: 100%;
+}
+
+.infoTitle {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0 0 0 0;
+}
+
+.priceCont {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 15px;
+  margin: -26px 0 0 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  color: #333333;
+
+  span {
+    margin: 0 32px 0 0;
+  }
+}
+
+.starsAbsoluteContainer {
+  left: 86px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.changeCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.changeLine {
+  width: 1px;
+  height: 22px;
+  background: #bdbdbd;
+}
+
+.portionCont {
+  display: flex;
+  flex-direction: column;
+  width: 172px;
+}
+
+.portionDescr {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0 0 12px 0;
+}
+
+.radioBlock {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 15px;
+    line-height: 16px;
+    letter-spacing: -0.03em;
+    color: #BDBDBD;
+  }
+
+  .radio1:checked ~ .label1 {
+    color: #333333;
+    border: 1px solid #E8B567;
+  }
+
+  .radio2:checked ~ .label2 {
+    color: #333333;
+    border: 1px solid #E8B567;
+  }
+
+  .radio3:checked ~ .label3 {
+    color: #333333;
+    border: 1px solid #E8B567;
+  }
+}
+
+.addCart {
+  margin: 0 0 0;
+  border-radius: 32px;
+  border: 1px solid #E8B567;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 62px;
+}
+
+.addCartText {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  text-align: start;
+  transition: .3s;
+  color: #333333;
+  width: 200px;
+}
+
+.addCartText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.addCartText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.addCart:hover .addCartText {
+  width: 250px;
+}
+
+.addCart:hover .addCartText::before, .addCart:hover .addCartText::after {
+  opacity: 1;
+}
+
+.plusWrapper {
+  display: flex;
+  height: 140px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plusCont {
+  display: flex;
+  align-items: center;
+
+  :nth-last-child(1) {
+    padding-bottom: 0;
+  }
+}
+
+.svgBorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E8B567;
+  margin: 0 6px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.plusDescr {
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+  color: #828282;
+}
+
+.changeContCounter {
+  display: flex;
+  flex-direction: column;
+}
+
+.changeCont__textCounter {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 1025px) {
+  .cont {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .priceCont {
+    margin: 16px 0 36px 0;
+  }
+  .addCart {
+    margin: 40px 0 54px 0;
+  }
+  .infoCont {
+    align-items: center;
+  }
+  .priceCont {
+    flex-direction: column;
+
+    span {
+      margin: 0 0 8px 0;
+    }
+  }
+  .starsAbsoluteContainer {
+    position: static;
+    transform: none;
+  }
+  .changeCont {
+    width: 100%;
+  }
+  .changeLine {
+    display: none;
+  }
+  .portionCont {
+    align-items: center;
+  }
+  .changeContCounter {
+    align-items: center;
+  }
+  .plusCont {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .infoCont {
+    width: 90%;
+  }
+  .infoTitle {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .changeCont {
+    width: 100%;
+  }
+  .addCart {
+    max-width: 330px;
+    width: 100%;
+  }
+}

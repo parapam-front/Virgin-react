@@ -39,7 +39,7 @@
 		"react/no-did-update-set-state": 1,
 		"react/no-multi-comp": 1,
 		"react/no-unknown-property": 1,
-		"react/prop-types": 1,
+		"react/prop-types": 0,
 		"react/react-in-jsx-scope": 1,
 		"react/require-extension": 0,
 		"react/self-closing-comp": 1,
@@ -113,7 +113,7 @@
 		"no-sequences": 1,               // disallow use of comma operator
 		"no-unused-expressions": 0,      // disallow usage of expressions in statement position
 		"no-void": 1,                    // disallow use of void operator (off by default)
-		"no-warning-comments": 0,        // disallow usage of configurable warning terms in comments": 1,                        // e.g. TODO or FIXME (off by default)
+		"no-warning-comments": 0,        // disallow usage of configurable warning terms in comments": 1,
 		"no-with": 1,                    // disallow use of the with statement
 		"radix": 1,                      // require use of the second argument for parseInt() (off by default)
 		"vars-on-top": 0,                // requires to declare all vars on top of their containing scope (off by default)
@@ -181,7 +181,7 @@
 		"keyword-spacing": 1,            // require a space after certain keywords (off by default)
 		"space-in-brackets": 0,          // require or disallow spaces inside brackets (off by default)
 		"space-in-parens": 0,            // require or disallow spaces inside parentheses (off by default)
-		"space-infix-ops": 1,            // require spaces around operators
+		"space-infix-ops": 0,            // require spaces around operators
 		"max-nested-callbacks": 0,       // specify the maximum depth callbacks can be nested (off by default)
 		"one-var": 0,                    // allow just one var statement per function (off by default)
 		"wrap-regex": 0,                 // require regex literals to be wrapped in parentheses (off by default)

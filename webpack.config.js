@@ -59,7 +59,7 @@ module.exports = {
     ],
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
     // resolve: {
     //     extensions: ['.js', '.json']
@@ -72,7 +72,8 @@ module.exports = {
     devtool: isDev ? 'source-map' : false,
     devServer: {
         port: 3000,
-        hot: isDev
+        hot: isDev,
+        historyApiFallback: true
     },
     plugins: [
             new CleanWebpackPlugin(),
@@ -85,14 +86,14 @@ module.exports = {
                         from: path.resolve(__dirname, 'src/favicon.ico'),
                         to: path.resolve(__dirname, 'dist')
                     },
-                    // {
-                    //     from: path.resolve(__dirname, 'src/assets/img'),
-                    //     to: path.resolve(__dirname, 'dist/assets/img')
-                    // },
-                    // {
-                    //     from: path.resolve(__dirname, 'src/assets/fonts'),
-                    //     to: path.resolve(__dirname, 'dist/assets/fonts')
-                    // }
+                    {
+                        from: path.resolve(__dirname, 'src/assets/img'),
+                        to: path.resolve(__dirname, 'dist/assets/img')
+                    },
+                    {
+                        from: path.resolve(__dirname, 'src/assets/fonts'),
+                        to: path.resolve(__dirname, 'dist/assets/fonts')
+                    }
                 ]
             }),
             new MiniCssExtractPlugin({

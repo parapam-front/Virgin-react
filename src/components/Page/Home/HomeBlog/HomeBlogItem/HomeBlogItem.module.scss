@@ -1,0 +1,43 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  width: 368px;
+  margin: 0;
+  align-items: center;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 238px;
+}
+
+.figcaption {
+  margin: 54px 0 0;
+}
+
+.title {
+  font-weight: normal;
+  margin: 0 0 34px 0;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.descr {
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.5);
+
+}
+
+@media (max-width: 640px) {
+  .cont {
+    max-width: 368px;
+    width: auto;
+  }
+  .img {
+  }
+}

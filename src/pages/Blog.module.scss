@@ -1,0 +1,29 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 70px 0 132px 0;
+}
+
+.blogContainer {
+  width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+@media (max-width: 1025px) {
+  .wrapper {
+
+  }
+  .blogContainer {
+    justify-content: center;
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    margin: 44px 0 64px;
+  }
+}

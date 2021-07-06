@@ -1,0 +1,43 @@
+.svgCont {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.input {
+  display: none;
+}
+
+.star-1 {
+  display: none;
+}
+
+.label-star {
+  stroke: #E8B567;
+  fill: none;
+  padding: 0 4px;
+  float: right;
+
+  svg {
+    .pathGrad {
+      fill: url(#grad1)
+    }
+  }
+}
+
+.input:not(:checked) ~ .label-star:hover,
+.input:not(:checked) ~ .label-star:hover ~ .label-star {
+  .pathNotRated {
+    fill: #E8B567;
+  }
+}
+
+.pathRated {
+  fill: #E8B567;
+}
+
+.starText {
+
+}

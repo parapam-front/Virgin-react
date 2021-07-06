@@ -1,0 +1,130 @@
+.wrapper {
+  height: 781px;
+  background: #161616;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textCont {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  padding: 198px 172px 212px 376px;
+}
+
+.text {
+  background: inherit;
+  width: 500px;
+  font-size: 64px;
+  line-height: 109px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #E8B567, #fff);
+}
+
+.button {
+  margin: 54px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 64px;
+  border-radius: 32px;
+  border: 1px solid #E8B567;
+}
+
+.buttonText {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  width: 106px;
+  text-align: start;
+  transition: .3s;
+}
+
+.buttonText::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 1px solid #E8B567;
+  border-top: 1px solid #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.buttonText::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  background: #E8B567;
+  transition: .3s;
+  position: absolute;
+}
+
+.button:hover .buttonText {
+  width: 172px;
+}
+
+.button:hover .buttonText::before,
+.button:hover .buttonText::after {
+  opacity: 1;
+}
+
+@media (max-width: 1370px) {
+  .wrapper {
+    width: 100%;
+    justify-content: center;
+
+    img {
+      display: none;
+    }
+  }
+  .textCont {
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    height: 332px;
+  }
+  .textCont {
+    padding: 0;
+  }
+  .text {
+    font-size: 24px;
+    line-height: 41px;
+    width: 218px;
+  }
+  .button {
+    margin: 36px 0 0 0;
+    width: 170px;
+    height: 40px;
+  }
+  .buttonText {
+    width: 92px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+  }
+  .button:hover .buttonText {
+    width: 132px;
+  }
+}
